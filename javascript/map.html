@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INNER HTML Page</title>
+    </head>
+    <body>
+       <h1>JavaScript Function</h1> 
+
+       <p id="demo"></p>
+       <p id="demo2"></p>
+       <p id="demo3"></p>
+
+
+       <script>
+    const numbers1=[45,4,9,6,16,25];
+    const numbers2=numbers1.map(myfuntion);
+    document.getElementById("demo").innerHTML=numbers2;
+    function myfuntion(value){
+        console.log(value);
+        return value*2;
+}
+
+       </script>
+    </body>
+
+</html>

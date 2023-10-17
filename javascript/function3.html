@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INNER HTML Page</title>
+    </head>
+    <body>
+       <h1>JavaScript Function</h1> 
+
+       <p id="demo1"></p>
+       <p id="demo2"></p>
+       <p id="demo3"></p>
+
+
+
+    
+       <script>
+        let text="outside"+typeof carName;
+        document.getElementById("demo1").innerHTML=text;
+
+        function writeText(){
+            let carName="Volvo";
+            let text="inside"+typeof carName+" "+ carName;
+            document.getElementById("demo2").innerHTML=text;
+        }
+        writeText();
+        text="a";
+        document.getElementById("demo3").innerHTML=text;
+     
+       </script>
+    </body>
+
+</html>

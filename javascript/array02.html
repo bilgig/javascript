@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INNER HTML Page</title>
+    </head>
+    <body>
+       <h1>My First H1 Element</h1> 
+
+       <p id="demo"></p>
+
+       <script>
+        try{
+        const cars=["Audi", "Volvo","BMW"];
+        cars=["bmw","volvo"];
+        }catch(err){
+            document.getElementById("demo").innerHTML=err;
+
+        }
+       // document.getElementById("demo").innerHTML=cars;
+       </script>
+    </body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML CALCULATOR Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+      .form-style{
+        max-width: 60%;
+      }
+      .body_card{
+      min-height: 340px;
+      }
+
+      .button-witdh{
+        width: 70px;
+       height: 35px;
+      }
+  </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card form-style">
+    <div class="card-body body_card">
+      <h5 class="card-title text-center">Calculator</h5>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputNumber1" class="form-label"> First number</label>
+          <input type="number" class="form-control" id="InputNumber1" aria-describedby="userNamelHelp" >
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputNumber2" class="form-label">Second Number</label>
+          <input type="number" class="form-control" id="InputNumber2" >
+        </div>
+            <button type="button" class="btn btn-primary button-witdh" onclick="sum()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+            </svg></button>
+            <button type="button" class="btn btn-primary button-witdh" onclick="minus()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+            </svg></button>
+            <button type="button" class="btn btn-primary button-witdh" onclick="multipy()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg></button>
+            <button type="button" class="btn btn-primary button-witdh" onclick="divide()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-lg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+            </svg></button>
+            <button type="button" class="btn btn-primary button-witdh" onclick="clearFn()">Clear</button>
+            <br>
+            <br>
+            <p id="hesapla"> </p>
+      </form>
+   
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function sum() {
+
+      let number1 = parseFloat(document.getElementById("InputNumber1").value);
+      let number2 = parseFloat(document.getElementById("InputNumber2").value);
+      let result = number1 + number2;
+      document.getElementById("hesapla").innerText = "Result: " + result;
+  }
+      function minus() {
+
+      let number1 = parseFloat(document.getElementById("InputNumber1").value);
+      let number2 = parseFloat(document.getElementById("InputNumber2").value);
+      let result = number1 - number2;
+      document.getElementById("hesapla").innerText = "Result: " + result;
+      }
+      function multipy() {
+
+      let number1 = parseFloat(document.getElementById("InputNumber1").value);
+      let number2 = parseFloat(document.getElementById("InputNumber2").value);
+      let result = number1 * number2;
+      document.getElementById("hesapla").innerText = "Result: " + result;
+      }
+      function divide() {
+
+      let number1 = parseFloat(document.getElementById("InputNumber1").value);
+      let number2 = parseFloat(document.getElementById("InputNumber2").value);
+      let result = number1 / number2;
+      document.getElementById("hesapla").innerText = "Result: " + result;
+      }
+      function clearFn() {
+      document.getElementById("InputNumber1").value="";
+      document.getElementById("InputNumber2").value="";
+      document.getElementById("hesapla").innerText="";
+      }
+
+</script>
+</body>
+</html>

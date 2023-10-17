@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INNER HTML Page</title>
+    </head>
+    <body>
+       <h1>JavaScript Function</h1> 
+
+       <p id="demo1"></p>
+       <p id="demo2"></p>
+       <p id="demo3"></p>
+
+    
+       <script>
+        let text="Apple, Banana, Kiwi";
+
+        let part=text.slice(7,13);
+        let part2=text.slice(7);
+        let part3=text.slice(-12,-6);
+
+
+        document.getElementById("demo1").innerHTML=part;
+        document.getElementById("demo2").innerHTML=part2;
+        document.getElementById("demo3").innerHTML=part3;
+
+       </script>
+    </body>
+
+</html>
