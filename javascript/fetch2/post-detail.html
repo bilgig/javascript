@@ -60,7 +60,7 @@ margin-top: -10px;
   border-color: #50A351;
 }
 .button-right{
-  margin-top: 10px;
+  float: right;
 }
   </style>
   </head>
@@ -79,10 +79,10 @@ margin-top: -10px;
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link login-style" href="./new-post.html">Post Oluştur</a>
+              <a class="nav-link" href="./new-post.html">Post Oluştur</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./postList.html">Post Listesi</a>
+              <a class="nav-link login-style" href="./postList.html">Post Listesi</a>
             </li>                 
           </ul>
           </div>     
@@ -92,30 +92,21 @@ margin-top: -10px;
     </div>
     <div class="row">
       <div class="login-text">
-        Yeni Gönderi Oluştur
+        Post Detayı
         <hr style="height:2px;border-width:0;color:gray;background-color:gray;padding-bottom: -50px; ">
       </div>
     </div>
 
     <div class="row">
-        <div class="width-div">
-        <form id="post-form">
-            <div class="form-group">
-              <label for="title">Başlık:</label>
-              <input type="text" class="form-control" id="title" required>
-            </div>
-            <div class="form-group">
-              <label for="body">İçerik</label>
-              <textarea class="form-control" id="body" rows="5" required></textarea>
-            </div>
-            <div class="button-right"></div>
-            <button type="submit" class="btn btn-primary">Gönderi Oluştur</button>
-            </div>
-          </form>
-          </div>  
+      <div class="width-div">
+        <div id="post-details">
+          <!--Post detayları buraya gelecek-->
+        </div>
+      </div>
+  
       </div>
       </div>
   </div>
-<script src="./new-post.js"></script>
-</body>
+  <script src="./post-detail.js"></script>
+  </body>
 </html>
